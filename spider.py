@@ -6,10 +6,10 @@ from bs4 import BeautifulSoup
 html_page = requests.get('http://wwww.zimbabwe-stock-exchange.com/downloads/zse/#prices')
 soup = BeautifulSoup(html_page.content)
 soup = soup.prettify()
-#string = r"http://wwww.zimbabwe-stock-exchange.com/External.asp?L=I&from=du&ID=64996&B=2104"
-string = r"^http\://[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(/\S*)?$"
+urls = re.findall('http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+', soup)
+
 
 
 for line in soup:
-    if line == re.search(string,soup):
+    if line == urls:
         print(line)
