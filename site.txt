@@ -1,0 +1,12 @@
+ction="https://www.zse.co.zw/index.php?option=com_content&amp;view=article&amp;id=135&amp;Itemid=249" method="post" id="login-form" class="form-inline">
+        <div class="userdata">
+        <div id="form-login-username" class="control-group">
+            <div class="controls">
+                <input id="modlgn-username" type="text" name="username" class="input-large" tabindex="1" size="18" placeholder="Username" />
+            </div>
+        </div>
+        <div id="form-login-password" class="control-group">
+            <div class="controls">
+                <input id="modlgn-passwd" type="password" name="password" class="input-large" tabindex="2" size="18" placeholder="Password" />
+            </div>
+        </div>
