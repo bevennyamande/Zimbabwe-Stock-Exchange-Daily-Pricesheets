@@ -1,5 +1,6 @@
 # Scrapper
-A basic scrapper for stock exchanges
+- A basic scrapper for stock exchanges
+- The scrapper targets zimbabwe stock exchange website
 
 ## Motive
 * Attempt to learn a new libraries
