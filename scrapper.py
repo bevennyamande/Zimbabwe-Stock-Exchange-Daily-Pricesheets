@@ -24,7 +24,7 @@ def get_todays_date() -> str:
 def set_todays_filename() ->str:
     """ Name to save the excel file """
 
-    return f'./pricesheets/{get_todays_date()}.xlsx'
+    return './pricesheets/{}.xlsx'.format(get_todays_date())
 
 
 def is_file_exist():
