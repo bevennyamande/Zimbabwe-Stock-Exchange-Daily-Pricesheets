@@ -38,7 +38,7 @@ def update_repo():
         repo = git.Repo(".")
         repo.git.add("--all")
         repo.git.commit("-m files")
-        git.push()
+        repo.git.push()
     return
 
 
