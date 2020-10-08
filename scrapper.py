@@ -7,7 +7,7 @@ from git import Git
 URL = "https://www.zse.co.zw/price-sheet/"
 
 git_ssh_identity_file = os.path.expanduser('~/.ssh/id_rsa')
-git_ssh_cmd = 'ssh -i %s' % git_ssh_identity_file
+# git_ssh_cmd = 'ssh -i %s' % git_ssh_identity_file
 
 def get_todays_pricesheet(URL: str):
     """ Get the price sheet from the website """
@@ -46,7 +46,7 @@ def update_repo():
 def main():
     df = get_todays_pricesheet(URL)
     df[0].to_excel(set_todays_filename(), header=True, index=False)
-    update_repo()
+    # update_repo()
 
 if __name__ == "__main__":
     main()
