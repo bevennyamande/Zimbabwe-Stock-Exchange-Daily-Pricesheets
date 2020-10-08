@@ -6,8 +6,6 @@ from git import Git
 
 URL = "https://www.zse.co.zw/price-sheet/"
 
-git_ssh_identity_file = os.path.expanduser('~/.ssh/id_rsa')
-# git_ssh_cmd = 'ssh -i %s' % git_ssh_identity_file
 
 def get_todays_pricesheet(URL: str):
     """ Get the price sheet from the website """
@@ -26,7 +24,7 @@ def get_todays_date() -> str:
 def set_todays_filename() ->str:
     """ Name to save the excel file """
 
-    return f'{get_todays_date()}.xlsx'
+    return f'./pricesheets/{get_todays_date()}.xlsx'
 
 
 def is_file_exist():
