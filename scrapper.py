@@ -44,8 +44,10 @@ def update_repo():
 
 
 def main():
+    print('Downloading pricesheet... please wait')
     df = get_todays_pricesheet(URL)
     df[0].to_excel(set_todays_filename(), header=True, index=False)
+    print('Download complete...')
     # update_repo()
 
 if __name__ == "__main__":
