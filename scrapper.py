@@ -15,40 +15,20 @@ def get_todays_pricesheet(URL: str):
     dataframe = pd.read_html(URL)
     return dataframe
 
-
 def get_todays_date() -> str:
     """ Get todays date """
 
     today_date = date.today()
     return today_date.strftime("%d-%m-%Y") # dd-mm-YY
 
-
 def set_todays_filename() ->str:
     """ Name to save the excel file """
 
     return './pricesheets/{}.xlsx'.format(get_todays_date())
 
-
-def is_file_exist():
-    """ Check if the file already exists """
-    pass
-
-def update_repo():
-    with Git().custom_environment(GIT_SSH_COMMAND=git_ssh_cmd):
-        repo = git.Repo(".")
-        repo.git.add("--all")
-        repo.git.commit("-m files")
-        repo.git.push()
-    return
-
-
-
 def main():
-    print('Downloading pricesheet... please wait')
     df = get_todays_pricesheet(URL)
     df[0].to_excel(set_todays_filename(), header=True, index=False)
-    print('Download complete...')
-    # update_repo()
 
 if __name__ == "__main__":
     main()
