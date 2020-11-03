@@ -3,6 +3,8 @@
 
 GIT=`which git`
 TODAY=$(date)
+# REPO=`/root/werkzeug/projects/Scrapper/.git/`
+# echo ${REPO}
 
 echo "Starting the application to download pricesheet for $TODAY"
 
