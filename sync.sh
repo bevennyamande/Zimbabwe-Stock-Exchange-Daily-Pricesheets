@@ -1,18 +1,20 @@
 #! /usr/bin/bash
+# Author: Beven Nyamande
 
-today=$(date)
+GIT=`which git`
+TODAY=$(date)
 
-echo "Starting the application to download pricesheet for $today"
+echo "Starting the application to download pricesheet for $TODAY"
 
 ./scrapper.py
 
 echo "Download for pricesheet completed successfully"
 
 echo "Now initialising git repo"
-git init
+${GIT} init
 
 echo "Now adding files"
-git add .
+${GIT} add --all
 
 echo "Now adding commit message"
-git commit -m "Pricesheet for $today"
+${GIT} commit -m "Pricesheet for $TODAY"
