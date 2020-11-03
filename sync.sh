@@ -1,6 +1,6 @@
 #! /usr/bin/bash
 
-today=date
+today=$(date)
 
 echo "Starting the application to download pricesheet for $today"
 
