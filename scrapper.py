@@ -1,10 +1,7 @@
 #! /usr/bin/python3
 
-import os
 from datetime import date
 import pandas as pd
-import git
-from git import Git
 
 URL = "https://www.zse.co.zw/price-sheet/"
 
