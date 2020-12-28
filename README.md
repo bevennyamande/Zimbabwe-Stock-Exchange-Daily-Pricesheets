@@ -9,4 +9,5 @@
 
 ## Disclaimer
 - This information is only for educational purposes
+- All copyrights belong to Zimbabwe Stock Exchange and therefore related information is not investment guidance
 
