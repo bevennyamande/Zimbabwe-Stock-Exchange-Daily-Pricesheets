@@ -20,5 +20,3 @@ echo "Now adding commit message"
 ${GIT} commit -m "Pricesheet for $TODAY"
 
 ${GIT} push
-
-bevennyamande
