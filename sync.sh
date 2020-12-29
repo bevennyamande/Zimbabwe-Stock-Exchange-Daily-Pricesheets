@@ -3,16 +3,14 @@
 
 GIT=`which git`
 TODAY=$(date)
-# REPO=`/root/werkzeug/projects/Scrapper/.git/`
-# echo ${REPO}
 
-echo "Starting the application to download pricesheet for $TODAY"
+echo "Now downloading pricesheet for $TODAY ......"
 
 ./scrapper.py
 
-echo "Download for pricesheet completed successfully"
+echo "Pricesheet downloaded successfully"
 
-echo "Now initialising git repo"
+echo "Initialising git repo"
 ${GIT} init
 
 echo "Now adding files"
@@ -20,3 +18,7 @@ ${GIT} add --all
 
 echo "Now adding commit message"
 ${GIT} commit -m "Pricesheet for $TODAY"
+
+${GIT} push
+
+bevennyamande
