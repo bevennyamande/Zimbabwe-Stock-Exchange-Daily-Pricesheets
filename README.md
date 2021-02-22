@@ -1,4 +1,4 @@
-# Scrapper
+# Zimbabwe-Stock-Exchange-Daily-Pricesheets
 Even though i have understanding of web scraping with Python and BeautifulSoup, i enrolled for a course
 on Udemy titled - learn Python by building a web scraper, i feel this project i can submit as a hands-on from the course.
 I have earned a completion course for web scraping with Python
