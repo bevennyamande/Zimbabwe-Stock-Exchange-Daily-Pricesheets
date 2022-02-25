@@ -4,7 +4,7 @@ on Udemy titled - learn Python by building a web scraper, i feel this project i 
 I have earned a completion course for web scraping with Python
 
 - A basic daily pricesheet scrapper for stock exchanges
-- The application targets zimbabwe stock exchange website
+
 
 ## Motive
 * Create an openly accessible dataset for Stock Exchange data analysis and Data scientist etc
@@ -12,5 +12,5 @@ I have earned a completion course for web scraping with Python
 * Automate the boring stuff
 
 ## Disclaimer
-- Information contained therewith is from The Zimbabwe Stock Exchange markets and daily prices. 
+- Information contained therewith is does not constitute any financial advice. 
 
