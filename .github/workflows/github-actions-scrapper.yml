@@ -24,4 +24,4 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Run the updating script
       run: |
-        python ../../scrapper.py
+        python scrapper.py
