@@ -8,7 +8,7 @@ on:
     - cron: '0 12 * * *'
 
 jobs:
-  build:
+  test_schedule:
 
     runs-on: ubuntu-latest
 
