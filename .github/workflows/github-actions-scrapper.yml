@@ -5,7 +5,7 @@ name: Scrapper application
 
 on:
   schedule:
-    - cron: '0 0 * * *' #runs at 00:00 UTC everyday
+    - cron: '1 * * * *' #runs at 00:00 UTC everyday
 
 jobs:
   build:
