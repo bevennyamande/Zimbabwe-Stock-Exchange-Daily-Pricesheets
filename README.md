@@ -1,16 +1,17 @@
 # Zimbabwe-Stock-Exchange-Daily-Pricesheets
-Even though i have understanding of web scraping with Python and BeautifulSoup, i enrolled for a course
-on Udemy titled - learn Python by building a web scraper, i feel this project i can submit as a hands-on from the course.
-I have earned a completion course for web scraping with Python
-
-- A basic daily pricesheet scrapper for stock exchanges
+This project aims at amassing vast dataset for the daily exchange trade at the Zimbabwe Stock Exchange.
+Basic this is a daily pricesheet scrapper for stock exchanges
 
 
 ## Motive
-* Create an openly accessible dataset for Stock Exchange data analysis and Data scientist etc
-* Attempt to learn a new libraries, learn more python, shell scripting
+* Create an openly accessible Zimbabwe Stock Exchange dataset for:
+- - Data Analytics && Data Sciences
+* Another personal motive is to learn a new libraries, learn more python
 * Automate the boring stuff
 
 ## Disclaimer
-- Information contained therewith is does not constitute any financial advice. 
+- Information contained therewith does not constitute any financial advice. 
+
+# Contribution
+- Feel free to reach out [@0xbeven](https://www.twitter.com/0xbeven)
 
