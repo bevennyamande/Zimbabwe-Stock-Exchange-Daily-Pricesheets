@@ -1,6 +1,7 @@
 # Zimbabwe-Stock-Exchange-Daily-Pricesheets
-This project aims at amassing vast dataset for the daily exchange trade at the Zimbabwe Stock Exchange.
-Basic this is a daily pricesheet scrapper for stock exchanges
+This project aims at amassing vast dataset of daily trade activity at the Zimbabwe Stock Exchange.
+Basically this is a daily pricesheet scrapper for stock exchanges
+- An Api for the dataset is found [here](https://rapidapi.com/bevennyamande/api/zexchange)
 
 
 ## Motive
