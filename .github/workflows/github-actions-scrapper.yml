@@ -7,9 +7,6 @@ on:
   schedule:
     - cron: '0 11 * * *'
 
-    branches:
-      - master
-
 jobs:
   test_schedule:
 
