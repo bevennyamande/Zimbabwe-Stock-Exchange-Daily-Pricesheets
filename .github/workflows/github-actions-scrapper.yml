@@ -4,11 +4,11 @@
 name: Scrapper application
 
 on:
-  push:
-    branches:
-      - master
   schedule:
     - cron: '0 11 * * *'
+
+    branches:
+      - master
 
 jobs:
   test_schedule:
