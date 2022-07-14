@@ -16,7 +16,6 @@ def main():
 		# only get the four columns and discard the first
 
 		df = df.iloc[::,1:]
-
 		# Only interested in the Name, Opening, Closing, Volume Labels
 		df.columns = ['name', 'opening', 'closing', 'volume']
 
