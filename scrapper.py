@@ -15,9 +15,9 @@ def main():
 		df.dropna(inplace=True)
 		# only get the four columns and discard the first
 
-		df = df.iloc[::,1:]
+		df = df.iloc[::,0:]
 		# Only interested in the Name, Opening, Closing, Volume Labels
-		df.columns = ['name', 'opening', 'closing', 'volume']
+		df.columns = ['Name', 'Opening', 'Closing', 'Volume']
 
 		now = datetime.now() # current date and time
 		current_date = now.strftime("%m-%d-%Y")
