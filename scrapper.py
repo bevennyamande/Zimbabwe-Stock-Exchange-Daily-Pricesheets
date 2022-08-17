@@ -16,12 +16,11 @@ def fetch_data_from_url(url):
     except Exception as e:
         pass
 
-    dataframe = response[0][4:]
+    dataframe = response[0][3:]
+
     # The response has 8 columns but only concerned with few
     dataframe.columns = [
         "Name",
-        "None",
-        "None",
         "None",
         "None",
         "Opening_Price",
