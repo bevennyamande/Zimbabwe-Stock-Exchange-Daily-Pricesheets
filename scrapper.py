@@ -18,8 +18,6 @@ def fetch_data_from_url(url):
 
     dataframe = response[0][3:]
 
-    import pdb;pdb.set_trace()
-
     # The response has 8 columns but only concerned with few
     dataframe.columns = [
         "Name",
