@@ -23,6 +23,8 @@ def fetch_data_from_url(url):
         "Name",
         "None",
         "None",
+        "None",
+        "None",
         "Opening_Price",
         "Closing_Price",
         "Volume_Traded",
