@@ -1,3 +1,5 @@
+[![Scrapper application](https://github.com/bevennyamande/Zimbabwe-Stock-Exchange-Daily-Pricesheets/actions/workflows/github-actions-scrapper.yml/badge.svg)](https://github.com/bevennyamande/Zimbabwe-Stock-Exchange-Daily-Pricesheets/actions/workflows/github-actions-scrapper.yml)
+
 # Zimbabwe-Stock-Exchange-Daily-Pricesheets
 This project aims at amassing vast dataset of daily trade activity at the Zimbabwe Stock Exchange.
 Basically this is a daily pricesheet scrapper for stock exchanges
