@@ -13,25 +13,28 @@ def fetch_data_from_url(url):
     try:
         response = pd.read_html(url, skiprows=1)
 
+        dataframe = response[0][3:]
+
+        # The response has 8 columns but only concerned with few
+
+        dataframe.columns = [
+            "Name",
+            "None",
+            "None",
+            "Opening_Price",
+            "Closing_Price",
+            "Volume_Traded",
+        ]
+
+        # Lets filter the columns we are concerned with
+        df_trades = dataframe[
+            ["Name", "Opening_Price", "Closing_Price", "Volume_Traded"]
+        ]
+        # Drop all the columns with no data or missing all data
+        dataframe = df_trades.dropna(how="all").set_index("Name")
     except Exception as e:
         pass
 
-    dataframe = response[0][3:]
-
-    # The response has 8 columns but only concerned with few
-    dataframe.columns = [
-        "Name",
-        "None",
-        "None",
-        "Opening_Price",
-        "Closing_Price",
-        "Volume_Traded",
-    ]
-    # Lets filter the columns we are concerned with
-    df_trades = dataframe[["Name", "Opening_Price", "Closing_Price", "Volume_Traded"]]
-
-    # Drop all the columns with no data or missing all data
-    dataframe = df_trades.dropna(how="all").set_index('Name')
     return dataframe
 
 
