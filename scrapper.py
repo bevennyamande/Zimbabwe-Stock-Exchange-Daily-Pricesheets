@@ -2,69 +2,65 @@ import os
 from datetime import datetime
 import pandas as pd
 
+
 BASE_URL = "https://www.zse.co.zw/price-sheet/"
-DAILY_CSV_DIR = "csv-daily-pricesheets"
-DAILY_XLS_DIR = "xls-daily-price-sheets"
-CUMULATIVE_CSV = "combined/all_prices.csv"
-CUMULATIVE_XLS = "combined/all_prices.xlsx"
 
 
 def fetch_data_from_url(url):
+    """
+    Fetch the market prices from the Zimbabwe Stock Exchange Website
+    """
     try:
         response = pd.read_html(url, skiprows=1)
+
         dataframe = response[0][3:]
-        dataframe.columns = ["Name", "None1", "None2", "Opening_Price", "Closing_Price", "Volume_Traded"]
-        df_trades = dataframe[["Name", "Opening_Price", "Closing_Price", "Volume_Traded"]]
-        df_trades = df_trades.dropna(how="all").set_index("Name")
-        return df_trades
+
+        # The response has 8 columns but only concerned with few
+
+        dataframe.columns = [
+            "Name",
+            "None",
+            "None",
+            "Opening_Price",
+            "Closing_Price",
+            "Volume_Traded",
+        ]
+
+        # Lets filter the columns we are concerned with
+        df_trades = dataframe[
+            ["Name", "Opening_Price", "Closing_Price", "Volume_Traded"]
+        ]
+        # Drop all the columns with no data or missing all data
+        dataframe = df_trades.dropna(how="all").set_index("Name")
     except Exception as e:
-        print(f"[ERROR] Failed to fetch or parse data: {e}")
-        return pd.DataFrame()
+        pass
+
+    return dataframe
 
 
-def current_date_str():
-    return datetime.now().strftime("%Y-%m-%d")
+def current_date():
+    """
+    Generate the current date for use in saving the price sheet
+    """
+    now = datetime.now()
+    current_date = now.strftime("%m-%d-%Y")
+    return current_date
 
 
-def save_daily_files(df, date_str):
-    os.makedirs(DAILY_CSV_DIR, exist_ok=True)
-    os.makedirs(DAILY_XLS_DIR, exist_ok=True)
-
-    df.to_csv(f"{DAILY_CSV_DIR}/{date_str}.csv")
-    df.to_excel(f"{DAILY_XLS_DIR}/{date_str}.xlsx")
-
-
-def update_cumulative_files(df, date_str):
-    os.makedirs("combined", exist_ok=True)
-
-    df = df.copy()
-    df["Date"] = date_str
-    df.reset_index(inplace=True)
-
-    if os.path.exists(CUMULATIVE_CSV):
-        existing = pd.read_csv(CUMULATIVE_CSV)
-        combined = pd.concat([existing, df], ignore_index=True)
-        combined.drop_duplicates(subset=["Name", "Date"], inplace=True)
-    else:
-        combined = df
-
-    combined.to_csv(CUMULATIVE_CSV, index=False)
-    combined.to_excel(CUMULATIVE_XLS, index=False)
+def check_or_create_directory(dataframe, current_date):
+    """
+    Create or save in the folder with other files
+    """
+    os.makedirs("csv-daily-pricesheets", exist_ok=True)
+    # Save the data into both the CSV and Excel folders
+    dataframe.to_csv(f"csv-daily-pricesheets/{current_date}.csv")
+    dataframe.to_csv(f"xls-daily-price-sheets/{current_date}.xlsx")
 
 
 def main():
-    date_str = current_date_str()
-    df = fetch_data_from_url(BASE_URL)
-
-    if df.empty:
-        print("[WARN] No data fetched. Skipping save.")
-        return
-
-    save_daily_files(df, date_str)
-    update_cumulative_files(df, date_str)
-    print(f"[INFO] Data saved for {date_str}")
+    dataframe = fetch_data_from_url(BASE_URL)
+    check_or_create_directory(dataframe, current_date())
 
 
 if __name__ == "__main__":
     main()
-
