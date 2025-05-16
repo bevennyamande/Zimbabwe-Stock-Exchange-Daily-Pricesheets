@@ -11,6 +11,7 @@ def fetch_data_from_url(url):
     Fetch the market prices from the Zimbabwe Stock Exchange Website
     """
     try:
+        # import pdb;pdb.set_trace()
         response = pd.read_html(url, skiprows=1)
 
         dataframe = response[0][3:]
@@ -58,8 +59,8 @@ def check_or_create_directory(dataframe, current_date):
 
 
 def main():
-    dataframe = fetch_data_from_url(BASE_URL)
-    check_or_create_directory(dataframe, current_date())
+    df = fetch_data_from_url(BASE_URL)
+    check_or_create_directory(df, current_date())
 
 
 if __name__ == "__main__":
