@@ -5,8 +5,6 @@ from dotenv import load_dotenv # Import load_dotenv
 
 load_dotenv() # Load environment variables from .env file
 
-# ... rest of your imports and code ...
-
 BASE_URL = os.getenv("ZSE_BASE_URL")
 
 def fetch_data_from_url(url):
