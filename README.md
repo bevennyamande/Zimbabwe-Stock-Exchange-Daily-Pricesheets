@@ -42,7 +42,7 @@ The information provided by this project is for **informational and educational 
 
 ---
 
-## Contribution
+## [Contribution](https://github.com/bevennyamande/Zimbabwe-Stock-Exchange-Daily-Pricesheets/blob/master/CONTRIBUTING.md)
 
 Contributions to this project are welcome! If you have ideas, suggestions, or would like to collaborate, feel free to reach out:
 
