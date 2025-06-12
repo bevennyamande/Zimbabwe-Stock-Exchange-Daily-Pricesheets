@@ -10,10 +10,10 @@ updates:
     schedule:
       interval: "weekly" # Check for updates weekly
     # You can add more options here if needed, e.g.,
-    # allow:
-    #   - dependency-type: "all" # Update all dependency types (development and production)
-    # labels:
-    #   - "dependencies"
-    # commit-message:
-    #   prefix: "deps"
-    #   include: "scope"
+    allow:
+      - dependency-type: "all" # Update all dependency types (development and production)
+    labels:
+      - "dependencies"
+    commit-message:
+      prefix: "deps"
+      include: "scope"
