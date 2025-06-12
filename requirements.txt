@@ -21,5 +21,5 @@ six==1.17.0
 SQLAlchemy==2.0.40
 typing_extensions==4.13.0
 tzdata==2025.2
-urllib3==2.3.0
+urllib3==2.4.0
 Werkzeug==3.1.3
