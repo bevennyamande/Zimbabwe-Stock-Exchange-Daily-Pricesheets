@@ -1,4 +1,12 @@
-## Roadmap
+## Roadmap & Future Enhancements
+
+Our vision for the Zimbabwe Stock Exchange Daily Pricesheets project involves continuous improvement and expansion. This roadmap outlines key areas for development, welcoming community contributions.
+
+```mermaid
+graph TD
+    A[Phase 1: Enhanced Automation & Data Consolidation] --> B[Phase 2: Data Enrichment & Scalable Storage]
+    B --> C[Phase 3: Dynamic Application & Advanced Analytics]
+
 
 ### TODOS
 
