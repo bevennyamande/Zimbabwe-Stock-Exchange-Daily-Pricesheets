@@ -11,7 +11,7 @@ Jinja2==3.1.6
 lxml==5.4.0
 MarkupSafe==3.0.2
 numpy==2.2.5
-pandas==2.2.3
+pandas==2.3.0
 PyMySQL==1.1.1
 python-dateutil==2.9.0.post0
 python-dotenv==1.1.0
