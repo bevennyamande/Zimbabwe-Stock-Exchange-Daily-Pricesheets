@@ -12,32 +12,28 @@ def fetch_data_from_url(url):
     Fetch the market prices from the Zimbabwe Stock Exchange Website
     """
     try:
-        # import pdb;pdb.set_trace()
-        response = pd.read_html(url, skiprows=1)
+        response = pd.read_html(url, header=0)
 
-        dataframe = response[0][3:]
-
-        # The response has 8 columns but only concerned with few
+        dataframe = response[0].copy()
 
         dataframe.columns = [
             "Name",
-            "None",
-            "None",
             "Opening_Price",
             "Closing_Price",
             "Volume_Traded",
         ]
 
-        # Lets filter the columns we are concerned with
         df_trades = dataframe[
             ["Name", "Opening_Price", "Closing_Price", "Volume_Traded"]
         ]
-        # Drop all the columns with no data or missing all data
-        dataframe = df_trades.dropna(how="all").set_index("Name")
-    except Exception as e:
-        pass
 
-    return dataframe
+        dataframe = df_trades.dropna(how="all").set_index("Name")
+        return dataframe
+
+    except Exception as e:
+        print(f'Exception occurred {e}')
+        return pd.DataFrame()  # Return an empty DataFrame on failure
+
 
 
 def current_date():
