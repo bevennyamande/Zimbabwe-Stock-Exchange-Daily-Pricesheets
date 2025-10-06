@@ -1,6 +1,6 @@
 dotenv==0.9.9
 lxml==5.4.0
-numpy==1.26.4
+numpy==2.3.3
 pandas==2.3.0
 python-dateutil==2.9.0.post0
 python-dotenv==1.1.0
