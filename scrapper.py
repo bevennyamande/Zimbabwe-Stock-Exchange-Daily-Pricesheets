@@ -9,7 +9,7 @@ BASE_URL = os.getenv("ZSE_BASE_URL")
 
 def fetch_data_from_url(url):
     """
-    Fetch the market prices from the Zimbabwe Stock Exchange Website
+    Fetch the market prices from the Zimbabwe Stock Exchange
     """
     try:
         response = pd.read_html(url, header=0)
