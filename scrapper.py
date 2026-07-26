@@ -1,7 +1,15 @@
+# ═══════════════════════════════════════════════════════════════════════════
+# DEPRECATED — July 2026
+# The ZSE data source (https://www.zse.co.zw/market-data) moved behind a
+# paywall.  This scraper no longer works and is kept for historical reference
+# only.  The accumulated dataset (Jan 2020 – Jun 2025) remains available in
+# this repository.
+# ═══════════════════════════════════════════════════════════════════════════
+
 import os
 from datetime import datetime
 import pandas as pd
-from dotenv import load_dotenv # Import load_dotenv
+from dotenv import load_dotenv  # Import load_dotenv
 
 load_dotenv() # Load environment variables from .env file
 

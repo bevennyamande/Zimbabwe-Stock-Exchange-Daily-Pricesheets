@@ -1,51 +1,50 @@
 [![Scrapper application](https://github.com/bevennyamande/Zimbabwe-Stock-Exchange-Daily-Pricesheets/actions/workflows/github-actions-scrapper.yml/badge.svg)](https://github.com/bevennyamande/Zimbabwe-Stock-Exchange-Daily-Pricesheets/actions/workflows/github-actions-scrapper.yml)
 
-# Zimbabwe-Stock-Exchange-Daily-Pricesheets
+# Zimbabwe Stock Exchange — Daily Price Sheets
 
-This project is dedicated to building and maintaining a **comprehensive, daily-updated dataset of trade activity from the Zimbabwe Stock Exchange (ZSE)**. It serves as an automated scraper that collects and organizes daily pricesheet information, creating a valuable historical record of market movements.
-
----
-
-## Features
-
-* **Daily Data Collection:** Automatic scraper that compiles daily stock exchange pricesheet
-* **Structured Output:** Generates organized datasets in easily digestible CSV and Excel formats.
-<!-- * **Public API Access:** The accumulated dataset is made accessible via a dedicated API for broader usage:
-    * [ZExchange API on RapidAPI](https://rapidapi.com/bevennyamande/api/zexchange) -->
+> **Project status: Archived (July 2026)**
+>
+> Data collected from **11 January 2020** through **16 June 2025** —
+> 1,032 trading days across 63 ZSE-listed companies.
 
 ---
 
-## Purpose & Goals
+## The Dataset
 
-* **Open Data Initiative:** To create an openly accessible historical dataset of Zimbabwe Stock Exchange activity, empowering:
-    * **Data Analysts & Data Scientists:** For market research, trend analysis, and model development.
-    * **Researchers:** For academic studies on emerging markets.
-* **Learning & Development:** To serve as a practical learning project for Python programming, data scraping techniques, and exploring new libraries.
-* **Automation:** To automate the routine and time-consuming task of manually collecting ZSE daily data.
+**Metrics:** Opening price, closing price, total traded volume.
+
+### Master sheets
+
+| File | Description |
+|---|---|
+| [`master_closing_price_11-Jan-2020_to_16-Jun-2025.csv`](master_closing_price_11-Jan-2020_to_16-Jun-2025.csv) | Closing prices (companies × dates) |
+| [`master_volume_traded_11-Jan-2020_to_16-Jun-2025.csv`](master_volume_traded_11-Jan-2020_to_16-Jun-2025.csv) | Traded volumes |
+| [`master_opening_price_11-Jan-2020_to_16-Jun-2025.csv`](master_opening_price_11-Jan-2020_to_16-Jun-2025.csv) | Opening prices |
+
+All three are structured as **companies × dates** matrices — companies as rows,
+trading days (`MM-DD-YYYY`) as columns.
+
+### Raw files
+
+- [`xls-daily-price-sheets/`](xls-daily-price-sheets/) — 1,057 daily sheets
+- [`xls_files_grouped_by_month_year/`](xls_files_grouped_by_month_year/) — same sheets, grouped into `MMM-YYYY` folders
+- [`csv-daily-pricesheets/`](csv-daily-pricesheets/) — CSV mirror
 
 ---
 
-## Data Output
+## Tools
 
-The scraper generates daily files in the following directories:
-
-* `csv-daily-pricesheets/`: Contains daily price sheets in **CSV** format.
-* `xls-daily-price-sheets/`: Contains daily price sheets in **Excel (XLSX)** format.
-
-Each file includes key metrics such as **Company Name, Opening Price, Closing Price, and Volume Traded**.
+| Script | Purpose |
+|---|---|
+| `group_xls_by_month.py` | Copies daily sheets into `MMM-YYYY` subfolders |
+| `build_master.py` | Rebuilds the three master CSVs from daily sheets |
+| `scrapper.py` | Original scraper (deprecated — kept for reference) |
 
 ---
 
 ## Disclaimer
 
-The information provided by this project is for **informational and educational purposes only** and does not constitute financial, investment, or trading advice. Users should conduct their own research and consult with qualified financial professionals before making any investment decisions.
-
----
-
-## [Contribution](https://github.com/bevennyamande/Zimbabwe-Stock-Exchange-Daily-Pricesheets/blob/master/CONTRIBUTING.md)
-
-Contributions to this project are welcome! If you have ideas, suggestions, or would like to collaborate, feel free to reach out:
-
-* **Twitter:** [@0xbeven](https://www.twitter.com/0xbeven)
+This dataset is provided for **informational and educational purposes only**
+and does not constitute financial, investment, or trading advice.
 
 ---

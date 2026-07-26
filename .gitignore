@@ -134,3 +134,6 @@ dmypy.json
 
 # VS Code settings
 .vscode/
+
+# Claude settings
+.claude/
