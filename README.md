@@ -8,10 +8,10 @@ This project is dedicated to building and maintaining a **comprehensive, daily-u
 
 ## Features
 
-* **Daily Data Collection:** Automatically scrapes and compiles daily pricesheet data from the ZSE website.
+* **Daily Data Collection:** Automatic scraper that compiles daily stock exchange pricesheet
 * **Structured Output:** Generates organized datasets in easily digestible CSV and Excel formats.
-* **Public API Access:** The accumulated dataset is made accessible via a dedicated API for broader usage:
-    * [ZExchange API on RapidAPI](https://rapidapi.com/bevennyamande/api/zexchange)
+<!-- * **Public API Access:** The accumulated dataset is made accessible via a dedicated API for broader usage:
+    * [ZExchange API on RapidAPI](https://rapidapi.com/bevennyamande/api/zexchange) -->
 
 ---
 
